@@ -1,7 +1,7 @@
 const neo4j = require('neo4j-driver');
 
 
-const neo4jDriver = neo4j.driver("bolt://0.0.0.0", neo4j.auth.basic("neo4j", "password"), {
+const neo4jDriver = neo4j.driver("bolt://localhost", neo4j.auth.basic("neo4j", "password"), {
     logging: { logger: (l, m) => console.log(m) },
   });
 
